@@ -1,0 +1,54 @@
+@import "./variables.scss";
+@import "./typography.scss";
+@import "./global-layout.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  //  /* set font size to rem*10 = px */
+  //  /* e.g 16px = 1.6rem */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: $brand-white;
+    background: $brand-black;
+  }
+}
+
+// Sticky footer
+.sticky-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &-page-body {
+    flex-grow: 2;
+  }
+}

@@ -1,0 +1,75 @@
+// generic
+  $general-radius-large: 20px;
+  $general-radius-small: 10px;
+
+  $general-border-width-large: 2px;
+  $general-border-width-small: 1px;
+  
+  $general-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // colors
+    $brand-black: #222222;
+    $brand-white: #ffffff;
+    $brand-red: #f0370a;
+    $brand-green: #B9A392;
+    $brand-yellow: #F2C94C;
+    $border-color: $brand-black;
+    $border-color-dark: $brand-white;
+
+// Fonts 
+
+// Layout
+  $margin-XL: 50px;
+  $margin-large: 20px;
+  $margin-small: 10px;
+
+// Nav
+  $nav-height-mobile: 60px;
+  $nav-height-desktop: 80px;
+  $nav-background-color: $brand-white;
+  $nav-background-color-dark: $brand-black;
+  $nav-font-color: $brand-black;
+  $nav-font-color-dark: $brand-white;
+
+  $nav-link-height: 40px;
+
+
+// Buttons
+
+$button-border-width: $general-border-width-small;
+$button-radius: $general-radius-large;
+$button-height: 40px;
+$button-font-size: 1.4rem;
+$button-padding: 0 20px;
+
+$button-primary-color: $brand-white;
+$button-primary-color-hover: $brand-black;
+
+$button-primary-background: $brand-black;
+$button-primary-background-hover: $brand-white;
+
+$button-primary-border-width: $general-border-width-small;
+$button-primary-border: $brand-black;
+$button-primary-border-hover: $brand-white;
+
+
+$button-secondary-color: $brand-black;
+$button-secondary-color-hover: $brand-white;
+
+$button-secondary-background: $brand-white;
+$button-secondary-background-hover: $brand-black;
+
+$button-secondary-border-width: $general-border-width-small;
+$button-secondary-border: $brand-black;
+$button-secondary-border-hover: $brand-white;
+
+
+// cards
+$card-radius: $general-radius-small;
+$card-background: $brand-white;
+$card-background-dark: $brand-black;
+$card-border: $brand-black;
+$card-border-dark: $brand-white;
+$card-border-width: $button-border-width;
+$card-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$card-shadow-hover: 0 0 10px rgba(0, 0, 0, 0.2);
+$card-padding: 25px;

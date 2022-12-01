@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { Layout } from '../components/layout/Layout'
+import { Layout } from '../../components/layout/Layout'
 
-export default function Home() {
+export default function Usage() {
   return (
     <div>
       <Head>

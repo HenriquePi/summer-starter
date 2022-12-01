@@ -1,0 +1,63 @@
+@import "./variables";
+
+.margin {
+  padding: 0 $margin-small;
+  @media (min-width: 768px) {
+    padding: 0 $margin-large;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 $margin-XL;
+  }
+}
+
+.flex-wrap {
+  &-1 {
+    display: flex;
+    flex-wrap: wrap;
+    > div, button, a, span {
+      width: 100%;
+    }
+  }
+  &-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    > div, button, a, span {
+      margin: 1% 0;
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 49%;
+      }
+    }
+  }
+  &-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    > div, button, a, span {
+      margin: 1% 0;
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 49%;
+      }
+      @media (min-width: 1024px) {
+        width: 32.333%;
+      }
+    }
+  }
+  &-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    > div, button, a, span {
+      margin: 1% 0;
+      width: 50%;
+      @media (min-width: 768px) {
+        width: 32.333%;
+      }
+      @media (min-width: 1024px) {
+        width: 24%;
+      }
+    }
+  }
+}

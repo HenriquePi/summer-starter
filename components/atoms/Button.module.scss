@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+.button {
+  border-radius: $button-radius;
+  border-width: $button-border-width;
+  height: $button-height;
+  font-size: $button-font-size;
+  padding: $button-padding;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  &-primary {
+    color: $button-primary-color;
+    background-color: $button-primary-background;
+    border: $button-primary-border-width solid $button-primary-border;
+    &:hover {
+      color: $button-primary-color-hover;
+      background-color: $button-primary-background-hover;
+      border: $button-primary-border-width solid $button-primary-border-hover;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $button-primary-color-hover;
+      background-color: $button-primary-background-hover;
+      border: $button-primary-border-width solid $button-primary-border-hover;
+      &:hover {
+        color: $button-primary-color;
+        background-color: $button-primary-background;
+        border: $button-primary-border-width solid $button-primary-border-hover;
+      }
+    }
+
+  }
+  &-secondary {
+    color: $button-secondary-color;
+    background-color: $button-secondary-background;
+    border: $button-secondary-border-width solid $button-secondary-border;
+    &:hover {
+      color: $button-secondary-color-hover;
+      background-color: $button-secondary-background-hover;
+      border: $button-secondary-border-width solid $button-secondary-border-hover;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $button-secondary-color-hover;
+      background-color: $button-secondary-background-hover;
+      border: $button-secondary-border-width solid $button-secondary-border-hover;
+      &:hover {
+        color: $button-secondary-color;
+        background-color: $button-secondary-background;
+        border: $button-secondary-border-width solid $button-primary-border-hover;
+      }
+    }
+
+  }
+}

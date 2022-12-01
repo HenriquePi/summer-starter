@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+.border {
+  height: 1px;
+  width: 100%;
+  background-color: $border-color;
+  @media (prefers-color-scheme: dark) {
+    background-color: $border-color-dark;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+.card {
+  border-radius: $card-radius;
+  background-color: $card-background;
+  border: $card-border-width solid $card-border;
+  @media (prefers-color-scheme: dark) {
+    background-color: $card-background-dark;
+    border: $card-border-width solid $card-border-dark;
+  }
+  box-shadow: $card-shadow;
+  padding: $card-padding;
+}

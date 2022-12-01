@@ -1,0 +1,125 @@
+@import "../../styles/variables.scss";
+
+.nav {
+  position: sticky;
+  top: 0;
+  box-shadow: $general-shadow;
+  z-index: 100;
+  min-height: $nav-height-mobile;
+  @media (min-width: 768px) {
+    min-height: $nav-height-desktop;
+  }
+
+  background-color: $nav-background-color;
+  border-bottom: $general-border-width-small solid $border-color;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $nav-background-color-dark;
+    border-bottom: $general-border-width-small solid $border-color-dark;
+  }
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 30%;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: $nav-link-height;
+      width: 100%;
+    }
+  }
+
+  &-desktop {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: $nav-height-desktop;
+    }
+  }
+
+  &-mobile {
+    display: none;
+    @media (max-width: 768px) {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: $nav-height-mobile;
+    }
+  }
+
+  &-burger {
+    @media (min-width: 768px) {
+      display: none;
+    }
+    display: flex;
+    position: absolute;
+    left: $margin-small;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+
+    // burger icon
+    span {
+      background-color: black;
+      height: 2px;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      transition: all 0.3s ease;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:nth-child(3) {
+        bottom: 0;
+      }
+    }
+    &-active {
+      span {
+        &:nth-child(1) {
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          bottom: 50%;
+          transform: translateY(50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+  &-mobile-menu {
+    height: 0;
+    width: 100%;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      .border {
+        width: 100%;
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+    &-active {
+      // multiply by number of nav items
+      height: calc($nav-link-height * 3)
+    }
+  }
+}

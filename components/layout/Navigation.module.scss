@@ -1,5 +1,10 @@
 @import "../../styles/variables.scss";
 
+.nav-wrapper {
+  position: absolute;
+  width: 100%;
+}
+
 .nav {
   position: sticky;
   top: 0;

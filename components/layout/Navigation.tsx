@@ -8,7 +8,7 @@ import Link from "next/link";
 export const Navigation = () => {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
   return (
-    <>    
+    <div className={style["nav-wrapper"]}>    
       <nav className={style.nav + " margin"}>
         <div className={style["nav-desktop"]}>
           <Link href="/">
@@ -31,6 +31,6 @@ export const Navigation = () => {
           <NavigationLinks />
         </div>
       </nav>
-    </>
+    </div>
   );
 };
